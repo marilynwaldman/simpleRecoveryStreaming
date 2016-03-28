@@ -36,11 +36,13 @@ To run locally:
 	bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test 
 	bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test --from-beginning
 	
-3.  git clone 
-    open a terminal window and cd  
+3.  Download Spark - note the directory ($SPARKDIR)- I am using Spark 1.3 with hadoop
+
+4.  git clone git@github.com:marilynwaldman/simpleRecoveryStreaming.git
+    open a terminal window and cd simpleRecoveryStreaming
     issue the following from the command line	
 
-	/Users/marilynwaldman/spark-1.3.0-bin-hadoop2.4/bin/spark-submit \
+	$SPARKDIR/spark-1.3.0-bin-hadoop2.4/bin/spark-submit \
 	 --class "DirectKafkaWordCount" \
 	 --master local[4] \
 	 target/scala-2.10/streaming-with-recovery.jar localhost:9092 myTopic ./checkpoint
