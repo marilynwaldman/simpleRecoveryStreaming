@@ -14,7 +14,6 @@ This command cleans output and compiles the application
 - the lasted version of sbt was used.  This meant getting rid of the imported plugins.  
 
 sbt assembly
-jar tf target/scala-2.10/my-project-assembly.jar
 
 ##Note
 - this is the spark-submit for local development
