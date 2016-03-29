@@ -11,8 +11,9 @@ NOTE: Using SBT for this project.
 This command cleans output and compiles the application 
 
 ##Note 
-- the lasted version of sbt was used.  This meant getting rid of the imported plugins.  
-
+- the lasted version of sbt was used.  This meant getting rid of the imported plugins. 
+ 
+cd simpleRecoveryStreaming
 sbt assembly
 
 ##Note
