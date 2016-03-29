@@ -4,7 +4,7 @@ Following are the steps to build and run this project
 NOTE: Using SBT for this project. 
 
 ##Clone the repo
-1. git clone git@github.com:marilynwaldman/SparkStreamingDIrectWithCheckpoint.git
+1. git clone https://github.com/marilynwaldman/simpleRecoveryStreaming
 
 
 ##Compile
@@ -30,11 +30,9 @@ To run locally:
 
 	bin/zookeeper-server-start.sh config/zookeeper.properties
 	bin/kafka-server-start.sh config/server.properties
-	bin/kafka-console-producer.sh --broker-list localhost:9092
-	bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
-	bin/kafka-topics.sh --list --zookeeper localhost:2181
-	bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test 
-	bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test --from-beginning
+	bin/kafka-console-producer.sh --broker-list localhost:9092 --topic myTopic
+	bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic myTopic --from-beginning
+
 	
 3.  Download Spark - note the directory ($SPARKDIR)- I am using Spark 1.3 with hadoop
 
